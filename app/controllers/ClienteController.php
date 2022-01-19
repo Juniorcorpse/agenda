@@ -10,8 +10,7 @@ class ClienteController extends Controller{
     private $campo = 'id_cliente';
 
     public function index(){
-       $dados["lista"]  = Service::lista($this->tabela);
-       
+       $dados["lista"]  = Service::lista($this->tabela);       
        $dados["view"]   = "Cliente/Index";
        $this->load("template", $dados);
     }
@@ -23,7 +22,12 @@ class ClienteController extends Controller{
     }
     
     public function edit($id){
-        $dados["view"]      = "Cliente/Create";
+        $cliente = Service::get($this->tabela, $this->campo, $id);
+        if (!$cliente) {
+            $this->redirect(url('cliente'));
+        }
+        $dados["cliente"] = $cliente;
+        $dados["view"]    = "Cliente/Create";
         $this->load("template", $dados);
     }
     
@@ -60,6 +64,8 @@ class ClienteController extends Controller{
     }
     
     public function excluir($id){
+        Service::excluir($this->tabela, $this->campo, $id);
+        $this->redirect(url('cliente'));
     }
 }
 

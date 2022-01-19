@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<script src="<?php echo URL_BASE ?>assets/js/jquery.min.js"></script>
 		<script>
-			var base_url = "<?php echo URL_BASE ?>";
+			var base_url = "<?= url(); ?>";
 		</script>
 	</head>
 	<body>

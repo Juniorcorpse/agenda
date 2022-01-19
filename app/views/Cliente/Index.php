@@ -52,7 +52,7 @@
 								<td align="center"><?= $cliente->celular;?></td>
 								<td align="center">
 									<a href="<?= URL_BASE ."cliente/edit/{$cliente->id_cliente}";?>" class="btn btn-verde">Editar</a>
-									<a href="javascritp:;" onclik="excluir(this)" data-entidade="cliente" data-id="<?= $cliente->id_cliente;?>" class="btn btn-vermelho">Excluir</a>
+									<a href="javascript:;" onclick="return excluir(this)" data-entidade="cliente" data-id="<?= $cliente->id_cliente;?>" class="btn btn-vermelho">Excluir</a>
 								</td>
 							</tr>
 							
