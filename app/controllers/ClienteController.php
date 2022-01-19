@@ -2,19 +2,23 @@
 namespace app\controllers;
 
 use app\core\Controller;
-use app\models\service\Service;
+use app\models\service\{Service, ClienteService};
 use app\core\Flash;
-use app\models\service\ClienteService;
 
 class ClienteController extends Controller{
-   
+    private $tabela = 'cliente';
+    private $campo = 'id_cliente';
+
     public function index(){
-       $dados["view"]  = "Cliente/Index";
+       $dados["lista"]  = Service::lista($this->tabela);
+       
+       $dados["view"]   = "Cliente/Index";
        $this->load("template", $dados);
     }
     
     public function create(){
-        $dados["view"] = "Cliente/Create";
+        $dados["cliente"] = Flash::getForm();
+        $dados["view"]    = "Cliente/Create";
         $this->load("template", $dados);
     }
     
@@ -24,6 +28,35 @@ class ClienteController extends Controller{
     }
     
     public function salvar(){
+        $cliente                = new \stdClass();
+        $cliente->id_cliente    = $_POST['id_cliente'];
+        $cliente->cliente       = $_POST['cliente'];
+        $cliente->endereco      = $_POST['endereco'];
+        $cliente->numero        = $_POST['numero'];
+        $cliente->bairro        = $_POST['bairro'];
+        $cliente->cidade        = $_POST['cidade'];
+        $cliente->cep           = $_POST['cep'];
+        // $cliente->ddd           = $_POST['ddd'];
+        $cliente->celular       = $_POST['celular'];
+        $cliente->sexo          = $_POST['sexo'];
+        $cliente->cpf           = $_POST['cpf'];
+        $cliente->email         = $_POST['email'];
+        // $cliente->site          = $_POST['site'];
+        $cliente->data_cadastro = date('Y-m-d');
+        $cliente->observacao    = $_POST['observacao'];
+        $cliente->uf            = $_POST['uf'];
+
+        Flash::setForm($cliente);
+        if (ClienteService::salvar($cliente, $this->campo, $this->tabela)) {
+            $this->redirect(url('cliente'));
+        }else{
+            if (!$cliente->id_cliente) {
+                $this->redirect(url('cliente/create'));
+            }else{
+                $this->redirect(url("cliente/edit/{$cliente->id_cliente}"));
+            }
+        }
+
     }
     
     public function excluir($id){

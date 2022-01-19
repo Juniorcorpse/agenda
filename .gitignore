@@ -28,7 +28,7 @@ composer.phar
 
 composer.lock
 agora_agenda.sql
-index.php
+
 
 google1e3b663fd6b4a066.html
 
@@ -39,7 +39,9 @@ source/Boot/config.php
 /vendor
 app/core*
 app/helper*
-app/models*
+app/models/dao/Dao.php
+app/models/service/Service.php
+
 app/util*
 /config*
 /assets/img*
