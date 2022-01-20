@@ -20,14 +20,37 @@
 			var base_url = "<?= url(); ?>";
 		</script>
 	</head>
-	<body>
-		
-		<?php $this->layout('cabecalho', $viewData); ?>
-		
-		<div class="conteudo">
-			<?php $this->load($view, $viewData); ?>
-		</div>
-		<?php $this->layout('rodape', $viewData); ?>
+	<body class="base-login">
+    <div class="rows mx-0" >	
+    <div class="col-4 m-auto" >	
+    <div class="caixa p-4 pb-4 position-relative">
+	<form action="<?= url('login/logar'); ?>" method="post">
+		<h1 class="text-center mt-2">login</h1>
+		<label class="mb-2 d-block"> <span class="text-label label">Login</span> 
+		<input	type="text" name="login" value="" class="form-campo">
+		</label> <label  class="mb-2 d-block"> <span class="text-label label">Senha</span> 
+		<input	type="password" name="senha" value="" class="form-campo">
+		</label> <input type="submit" value="Entrar" class="btn btn-amarelo d-table m-auto width-100 h5">
+	</form>	
+    <a href="" class="senha text-azul mt-3 d-block">Esqueci minha senha</a>
+								
+        <div class="mostrasenha d-none">
+        <div class="caixa">
+            <span class="sair senha">X</span>
+            <h1 class="h3 mb-0 pb-1">Esqueci minha senha </h1>
+            <p class="text-center pb-4">Digite seu email no campo abaixo para recuperar sua senha</p>
+            <form action="" method="post">
+                <label>
+                    <input type="text" value="" placeholder="Inserir email" class="form-campo">
+                </label>				
+                </label>							
+                <input type="submit" value="Enviar" class="btn">
+            </form>
+        </div>
+        </div>
+</div>
+</div>
+</div>
 			
 		 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>		
 		<script src="https://kit.fontawesome.com/9480317a2f.js"></script>

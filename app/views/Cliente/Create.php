@@ -10,7 +10,7 @@
 						?>					
 							<div class="rows">
 							  <div class="col-3 position-relative">									
-									<img src="<?= URL_BASE ?>assets/img/img-usuario.png" class="img-fluido foto">
+									<img src="<?= isset($cliente->foto) ? $cliente->foto : url('assets/img/img-usuario.png') ?>" class="img-fluido foto">
 									<div  class="foto-file">
 										<input type="file" id="editarFoto"><label for="editarFoto"><span>Editar foto</span></label>
 									</div>
