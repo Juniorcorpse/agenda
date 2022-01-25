@@ -4,7 +4,7 @@
 			
 					<div>
 						<div class="text-end d-flex">
-							<a href="<?= URL_BASE ."cliente/create"?>" class="btn d-inline-block mb-2 mx-1"><i class="fas fa fa-plus-circle" aria-hidden="true"></i> Cadastrar cliente</a>
+							<a href="<?= url('cliente/create')?>" class="btn d-inline-block mb-2 mx-1"><i class="fas fa fa-plus-circle" aria-hidden="true"></i> Cadastrar cliente</a>
 							<a href="" class="btn btn-roxo d-inline-block mb-2 filtro"><i class="fas fa fa-filter" aria-hidden="true"></i> Filtrar</a>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 								<td><?= $cliente->email;?></td>
 								<td align="center"><?= $cliente->celular;?></td>
 								<td align="center">
-									<a href="<?= URL_BASE ."cliente/edit/{$cliente->id_cliente}";?>" class="btn btn-verde">Editar</a>
+									<a href="<?= url("cliente/edit/{$cliente->id_cliente}");?>" class="btn btn-verde">Editar</a>
 									<a href="javascript:;" onclick="return excluir(this)" data-entidade="cliente" data-id="<?= $cliente->id_cliente;?>" class="btn btn-vermelho">Excluir</a>
 								</td>
 							</tr>

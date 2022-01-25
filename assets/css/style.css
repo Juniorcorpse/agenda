@@ -57,6 +57,14 @@ body.base-login .caixa label
 .mostraCampo.bg-login-1 .fechar:hover{
 	color:red;cursor:pointer	
 }
+
+.mostraCampo .caixa .sair{
+	position: absolute!important;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
 .topo{
 	width:100%;
 	padding:10px 0;

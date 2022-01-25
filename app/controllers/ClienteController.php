@@ -36,7 +36,7 @@ class ClienteController extends Controller{
         $cliente->id_cliente    = $_POST['id_cliente'];
         $cliente->cliente       = $_POST['cliente'];
         $cliente->endereco      = $_POST['endereco'];
-        $cliente->complemento      = $_POST['complemento'];
+        $cliente->complemento   = $_POST['complemento'];
         $cliente->numero        = $_POST['numero'];
         $cliente->bairro        = $_POST['bairro'];
         $cliente->cidade        = $_POST['cidade'];
