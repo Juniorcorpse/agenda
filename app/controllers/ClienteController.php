@@ -68,5 +68,15 @@ class ClienteController extends Controller{
         Service::excluir($this->tabela, $this->campo, $id);
         $this->redirect(url('cliente'));
     }
+
+    public function filtro()
+    {
+        $campo = $_GET['campo'];
+        $valor = $_GET['valor'];
+
+        $dados["lista"]  = Service::getLike($this->tabela, $campo, $valor, true);       
+        $dados["view"]   = "Cliente/Index";
+        $this->load("template", $dados);
+    }
 }
 

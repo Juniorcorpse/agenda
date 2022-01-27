@@ -26,12 +26,12 @@
 									</div>
 									<div class="col-4">
 										<label>Cep</label>
-										<input name="cep" value="<?= isset($cliente->cep) ? $cliente->cep : null ?>" type="text" placeholder="Insira seu CEP" class="form-campo">
+										<input name="cep" value="<?= isset($cliente->cep) ? $cliente->cep : null ?>" type="text" placeholder="Insira seu CEP" class="form-campo mascara-cep busca_cep">
 									</div>
 									
 									<div class="col-8">				
 										<label>Endereço</label>
-										<input name="endereco" value="<?= isset($cliente->endereco) ? $cliente->endereco : null ?>" type="text" placeholder="Insira seu endereço" class="form-campo">
+										<input name="endereco" value="<?= isset($cliente->endereco) ? $cliente->endereco : null ?>" type="text" placeholder="Insira seu endereço" class="form-campo rua">
 									</div>
 								</div>
 								</div>
@@ -45,25 +45,25 @@
 								</div>									
 								<div class="col-6">
 									<label>Bairro</label>
-									<input name="bairro" value="<?= isset($cliente->bairro) ? $cliente->bairro : null ?>" type="text" placeholder="Insira seu bairro" class="form-campo">
+									<input name="bairro" value="<?= isset($cliente->bairro) ? $cliente->bairro : null ?>" type="text" placeholder="Insira seu bairro" class="form-campo bairro">
 								</div>
 								<div class="col-6">
 									<label>Cidade</label>
-									<input name="cidade" value="<?= isset($cliente->cidade) ? $cliente->cidade : null ?>" type="text" placeholder="Insira sua cidade" class="form-campo">	
+									<input name="cidade" value="<?= isset($cliente->cidade) ? $cliente->cidade : null ?>" type="text" placeholder="Insira sua cidade" class="form-campo cidade">	
 								</div>	
 							
 								<div class="col-3">
 									<label>UF</label>
-									<input name="uf" value="<?= isset($cliente->uf) ? $cliente->uf : null ?>" type="text" placeholder="Insira sua cidade" class="form-campo">	
+									<input name="uf" value="<?= isset($cliente->uf) ? $cliente->uf : null ?>" type="text" placeholder="Insira seu estado" class="form-campo estado">	
 								</div>								
 													
 								<div class="col-3">
 									<label>Celular</label>
-									<input name="celular" value="<?= isset($cliente->celular) ? $cliente->celular : null ?>" type="text" placeholder="Insira seu celular" class="form-campo">
+									<input name="celular" value="<?= isset($cliente->celular) ? $cliente->celular : null ?>" type="text" placeholder="Insira seu celular" class="form-campo mascara-celular">
 								</div>
 								<div class="col-4">
 									<label>CPF</label>
-									<input name="cpf" value="<?= isset($cliente->cpf) ? $cliente->cpf : null ?>" type="text" placeholder="Insira seu CPF" class="form-campo">
+									<input name="cpf" value="<?= isset($cliente->cpf) ? $cliente->cpf : null ?>" type="text" placeholder="Insira seu CPF" class="form-campo mascara-cpf">
 								</div>
 								<div class="col-4">
 									<label>Sexo</label>

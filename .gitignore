@@ -47,7 +47,7 @@ app/util*
 /assets/img*
 /assets/js/js.js
 
-storage/*
+/storage*
 
 
 
