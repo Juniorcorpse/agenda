@@ -22,11 +22,16 @@
 										<option value="celular">Fone</option>
 									</select>
 								</div>
-								<div class="col-6">
+								<div class="col-4">
 									<input type="text"  name="valor" placeholder="Valor da pesquisar..." >
 								</div>
 								<div class="col-2">
 									<input type="submit" class="btn" value="pesquisar">
+									
+								</div>
+								<div class="col-2">
+									
+									<a href="<?= url('cliente')?>" class="btn">Limpar</a>
 								</div>
 						</div>
 						</form>
